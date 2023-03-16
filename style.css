@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+  }
+
+  .center {
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
