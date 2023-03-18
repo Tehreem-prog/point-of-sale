@@ -25,3 +25,6 @@ td {
 th, td {
     border-bottom: 1px solid;
   }
+table,th,td{
+  border-collapse: collapse;
+}  
