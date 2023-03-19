@@ -1,1 +1,55 @@
 test file changes by mahnoor
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+  <title>Dashboard </title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="dashboard.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+	<div class="sidebar">
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Product</span>
+          </a>
+        
+        </li>
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Stock</span>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Billing</span>
+          </a>
+        </li>
+	  </ul>
+    </div>
+  <section class="home-section">
+    <nav>
+	  <img src="bakery_logo.jpg" class="select">
+	 <div class="def"> <h2 style="text-align:center"   color:rgb(107, 47, 7);> BEST SELLING PRODUCTS</h2></div>
+	  <img src="ferrero.jpg" class="sellect">
+	  
+	  <img src="cupcake.jpg" class="sellect">
+	  <img src="cookie.jpg" class="sellect">
+	  <div class="abc"><h2>     &ensp; &ensp;&ensp;Ferrero Rocher Cake  &ensp;&ensp;&ensp;&nbsp;&ensp;
+	  &ensp;&ensp; &ensp; &ensp;Chocolate cupcake   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp; Nutella Filled Cookie <h2></div>
+	</nav>  
+</body>
+</html>
