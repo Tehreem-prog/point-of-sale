@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Products</title>
+    <style>
+        table, th, td {
+          border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        /* tr:nth-child(even) {
+            background-color: rgb(230, 126, 34);
+        } */
+        tr {
+            border-bottom: 1px solid rgb(107, 47, 7);;
+        }
+        tr:hover {background-color: rgb(230, 126, 34)}
+        th {background-color: rgb(230, 126, 34);}
+        h1 {
+            text-align: center;
+          }
+
+        .center {
+            width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+
+          }
+        .sidebar .nav-links li a{
+              height: 100%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+
+              transition: all 0.4s ease;
+            }
+        .sidebar .nav-links li a.active{
+              background:rgb(230,126,34) ;
+
+            }
+        .sidebar .nav-links li a:hover{
+              background: RGB(229, 93, 2 )
+            }
+            .sidebar .nav-links li i{
+              min-width: 60px;
+              text-align: center;
+              font-size: 18px;
+              color:rgb(240, 96, 0);
+
+            }
+        .sidebar .nav-links li a .links_name{
+              color:rgb(107, 47, 7);
+              font-size: 20px;
+              font-weight: 600;
+              white-space: nowrap;
+              /*text-align: center;*/
+            }
+    </style>
+</head>
+
+<body style="color: rgb(107, 47, 7);">
+  <br>
+    <h1>Stock</h1>
+  <br>
+  <div class="sidebar">
+      <ul class="nav-links">
+          <li style="text-align: center">
+          <a href="{% url 'add_product' %}" class="active">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Add Product</span>
+          </a>
+          </li>
+	  </ul>
+    </div>
+  <table class="center">
+      <tr>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>Quantity</th>
+        <th>PRICE</th>
+      </tr>
+      {% for product in products %}
+      <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>Price - {{ product.price }}</td>
+      </tr>
+      {% endfor %}
+<!--      <tr>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--        <td></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--          <td></td>-->
+<!--      </tr>-->
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

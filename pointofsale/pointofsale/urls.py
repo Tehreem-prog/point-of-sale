@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 from pos import views
 
 urlpatterns = [
+    path('', views.dashboard),
+    # path('', include('pos.urls')),
     path('admin/', admin.site.urls),
-    path('', views.products),
-
+    path('dashboard/', views.dashboard, name = 'dashboard'),
+    path('dashboard/products/', views.products, name='products'),
+    path('dashboard/products/add/', views.add_product, name='add_product'),
 ]

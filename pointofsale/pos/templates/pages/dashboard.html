@@ -1,0 +1,145 @@
+<html lang="en" dir="ltr">
+  <head>
+  <title>Dashboard </title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="dashboard.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+                  *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+        * {
+          box-sizing: border-box;
+        }
+
+
+        .sidebar{
+          position: fixed;
+          height: 100%;
+          width: 240px;
+          background:rgb(230,126,34);
+          transition: all 0.5s ease;
+
+        }
+
+        .sidebar.active{
+          width: 60px;
+        }
+        .sidebar .nav-links{
+          margin-top: 20px;
+        }
+        .sidebar .nav-links li{
+          position: relative;
+          list-style: none;
+          height: 160px;
+
+
+        }
+        .sidebar .nav-links li a{
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+
+          transition: all 0.4s ease;
+        }
+        .sidebar .nav-links li a.active{
+          background:rgb(230,126,34) ;
+
+        }
+        .sidebar .nav-links li a:hover{
+          background: RGB(229, 93, 2 )
+        }
+        .sidebar .nav-links li i{
+          min-width: 60px;
+          text-align: center;
+          font-size: 18px;
+          color:rgb(240, 96, 0);
+
+        }
+        .sidebar .nav-links li a .links_name{
+          color:rgb(107, 47, 7);
+          font-size: 20px;
+          font-weight: 600;
+          white-space: nowrap;
+
+        }
+        .home-section{
+          position: relative;
+          background:white;
+          min-height: 100vh;
+          width: calc(100% - 240px);
+          left: 240px;
+          transition: all 0.5s ease
+        }
+        .select {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 40%;
+
+          border-radius: 60%;
+        }
+        .sellect {
+            display:inline-block;
+            position:flex;
+            width: 32%;
+            padding:6px 6px;}
+        .abc{
+        color:rgb(107, 47, 7);}
+        .def{  color:rgb(107, 47, 7);}
+      </style>
+   </head>
+<body>
+	<div class="sidebar">
+      <ul class="nav-links">
+        <li>
+          <a href="{% url 'dashboard' %}" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">NEW +</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'products' %}" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Stock</span>
+          </a>
+        </li>
+        <li>
+          <a href="billing.html" class="active">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Billing</span>
+          </a>
+        </li>
+        <li>
+          <a href="customers.html" class="active">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Customer<br>Data</span>
+          </a>
+        </li>
+
+
+	  </ul>
+    </div>
+  <section class="home-section">
+    <nav>
+        {% load static %}
+	  <img src="{% static '/images/bakery_logo.jpg' %}" class="select">
+	 <div class="def"> <h2 style="text-align:center"   color:rgb(107, 47, 7);> BEST SELLING PRODUCTS</h2></div>
+        {% load static %}
+	  <img src="{% static '/images/ferrero.jpg' %}" class="sellect">
+        {% load static %}
+	  <img src="{% static '/images/cupcake.jpg' %}" class="sellect">
+        {% load static %}
+	  <img src="{% static '/images/cookie.jpg' %}" class="sellect">
+	  <div class="abc"><h2>     &ensp; &ensp;&ensp;Ferrero Rocher Cake  &ensp;&ensp;&ensp;&nbsp;&ensp;
+	  &ensp;&ensp; &ensp; &ensp;Chocolate cupcake   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp; Nutella Filled Cookie </h2>
+      </div>
+	</nav>
+</body>
+</html>

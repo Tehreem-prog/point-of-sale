@@ -10,27 +10,27 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Billing',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('products', models.CharField(max_length=200)),
-                ('quantity', models.IntegerField()),
-                ('price', models.IntegerField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Customer',
-            fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('total_bill', models.IntegerField()),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-            ],
-        ),
-        migrations.RenameField(
-            model_name='product',
-            old_name='productname',
-            new_name='name',
-        ),
+        # migrations.CreateModel(
+        #     name='Billing',
+        #     fields=[
+        #         ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('products', models.CharField(max_length=200)),
+        #         ('quantity', models.IntegerField()),
+        #         ('price', models.IntegerField()),
+        #     ],
+        # ),
+        # migrations.CreateModel(
+        #     name='Customer',
+        #     fields=[
+        #         ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+        #         ('total_bill', models.IntegerField()),
+        #         ('created_at', models.DateTimeField(auto_now_add=True)),
+        #         ('updated_at', models.DateTimeField(auto_now=True)),
+        #     ],
+        # ),
+        # migrations.RenameField(
+        #     model_name='product',
+        #     old_name='productname',
+        #     new_name='name',
+        # ),
     ]
