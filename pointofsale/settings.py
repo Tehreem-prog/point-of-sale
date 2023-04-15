@@ -95,12 +95,19 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'n5he5buomriistuz',
+    #     'USER': 'i8ikluqlu2xktyqq',
+    #     'PASSWORD': 'encjq5cov9fax5yc',
+    #     'HOST': 'xlf3ljx3beaucz9x.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    #     'PORT': '3306',
+    # }
 }
 
 if "DATABASE_URL" in os.environ:
     # Configure Django for DATABASE_URL environment variable.
-    DATABASES["default"] = dj_database_url.config(
-        conn_max_age=MAX_CONN_AGE, ssl_require=True)
+    DATABASES["default"] = dj_database_url.config(conn_max_age=MAX_CONN_AGE, ssl_require=True)
 
     # Enable test database if found in CI environment.
     if "CI" in os.environ:
