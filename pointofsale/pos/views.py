@@ -1,11 +1,11 @@
 # Create your views here.
 from django.shortcuts import render, redirect
-from .models import *
+from .models import Product
 from .forms import ProductForm
 
 
 def products(request):
-    products = Product.objects.all()
+    products = Product.objects.raw('select * from pos_product')
     return render(request, 'pages/products.html', {'products':products})
 
 

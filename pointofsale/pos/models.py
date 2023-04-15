@@ -6,7 +6,6 @@ class Product(models.Model):
     description = models.TextField()
     quantity = models.IntegerField()
 
-
 class Customer(models.Model):
     total_bill = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
