@@ -34,7 +34,7 @@ if not IS_HEROKU:
 if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -89,12 +89,20 @@ MAX_CONN_AGE = 600
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pos',
-        'USER': 'root',
-        'PASSWORD': 'abcd1234',
-        'HOST': 'localhost',
+        'NAME': 'tehreem$pos',
+        'USER': 'tehreem',
+        'PASSWORD': 'bms12345',
+        'HOST': 'tehreem.mysql.pythonanywhere-services.com',
         'PORT': '3306',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'pos',
+    #     'USER': 'root',
+    #     'PASSWORD': 'abcd1234',
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'n5he5buomriistuz',
