@@ -1,6 +1,6 @@
 <html lang="en" dir="ltr">
   <head>
-  <title>Dashboard </title>
+  <title>About Us</title>
     <meta charset="UTF-8">
 	<link rel="stylesheet" href="dashboard.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,6 +93,7 @@
         .abc{
         color:rgb(107, 47, 7);}
         .def{  color:rgb(107, 47, 7);}
+        .desc{color:rgb(107, 47, 7);}
       </style>
    </head>
 <body>
@@ -101,7 +102,7 @@
         <li>
           <a href="{% url 'dashboard' %}" class="active">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">NEW +</span>
+            <span class="links_name">DashBoard</span>
           </a>
         </li>
         <li>
@@ -116,12 +117,12 @@
             <span class="links_name">Customer<br>Data</span>
           </a>
         </li>
-          <li>
-          <a href={% url 'aboutus' %} class="active">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">About us</span>
-          </a>
-        </li>
+        <!--  <li>-->
+        <!--  <a href="{% url 'dashboard' %}" class="active">-->
+        <!--    <i class='bx bx-grid-alt' ></i>-->
+        <!--    <span class="links_name">NEW +</span>-->
+        <!--  </a>-->
+        <!--</li>-->
 
 
 	  </ul>
@@ -130,15 +131,22 @@
     <nav>
         {% load static %}
 	  <img src="{% static '/images/bakery_logo.jpg' %}" class="select">
-	 <div class="def"> <h2 style="text-align:center"   color:rgb(107, 47, 7);> BEST SELLING PRODUCTS</h2></div>
-        {% load static %}
-	  <img src="{% static '/images/ferrero.jpg' %}" class="sellect">
-        {% load static %}
-	  <img src="{% static '/images/cupcake.jpg' %}" class="sellect">
-        {% load static %}
-	  <img src="{% static '/images/cookie.jpg' %}" class="sellect">
-	  <div class="abc"><h2>     &ensp; &ensp;&ensp;Ferrero Rocher Cake  &ensp;&ensp;&ensp;&nbsp;&ensp;
-	  &ensp;&ensp; &ensp; &ensp;Chocolate cupcake   &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&ensp;&ensp;&ensp; Nutella Filled Cookie </h2>
+	 <div class="def"> <h2 style="text-align:center"   color:rgb(107, 47, 7);>About Us</h2></div>
+	 <br><br>
+	 <div class="desc"> <p style="text-align:center"   color:rgb(107, 47, 7);>Welcome to our bakery management system,
+	 a reliable point-of-sale solution designed specifically for the bakery industry.
+	Our system is equipped with all the necessary features to help you streamline your bakery operations and increase your revenue.
+	<br>
+    With our easy-to-use interface, you can manage your inventory, track sales, and generate reports with just a few clicks.
+    Our system also includes customer management tools,
+    allowing you to build lasting relationships with your customers through loyalty programs and targeted marketing campaigns.
+    <br>
+    We understand the unique challenges faced by bakeries, and our system is designed to help you overcome them.
+    Our team is dedicated to providing you with exceptional support, ensuring that your business runs smoothly and efficiently.
+    <br>
+    Thank you for choosing our bakery management system.
+</p></div>
+
       </div>
 	</nav>
 </body>

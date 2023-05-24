@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Add Product</title>
+    <style>
+        .center-form {
+            justify-content: center;
+            /*display: flex;*/
+            margin: 40px 50px;
+            border: 3px;
+            padding: 30px;
+            background-color: rgb(230, 126, 34);
+        }
+        h1 {
+            text-align: center;
+          }
+    </style>
+</head>
+<body style="color: rgb(107, 47, 7);">
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+<h1>Add Product</h1>
+    <form method="POST" action="{% url 'add_product' %}" class="center-form">
+        {% csrf_token %}
+        <label for="name">Product name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <br>
+        <label for="Desc">Description:</label><br>
+        <input type="text" id="description" name="description"><br>
+        <br>
+        <label for="QTY">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity"><br>
+        <br>
+        <label for="Price">Price:</label><br>
+        <input type="text" id="price" name="price"><br>
+        <br>
+        <input type="submit" value="Add">
+        
+    </form>
+
+</body>
+</html>
